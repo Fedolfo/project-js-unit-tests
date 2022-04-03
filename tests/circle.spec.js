@@ -1,7 +1,5 @@
 /* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
-
-const assert = require('assert');
 const circle = require('../src/circle');
 
 /*
@@ -24,20 +22,36 @@ const circle = require('../src/circle');
 */
 
 describe('4 - Implemente os casos de teste para a função `circle`', () => {
-  it('Verifica se ao receber um raio, a função `circle` retorna um objeto contedos os valores esperados', () => {
-    
-    // ESCREVA SEUS TESTES ABAIXO:
-    // Teste se circle retorna um objeto.
-    assert.strictEqual(typeof(circle(1)), 'object')
-    // Teste se o objeto retornado tem 3 entradas.
-    assert.strictEqual(Object.keys(circle(1)).length, 3);
-    // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
-    assert.strictEqual(circle(), undefined);
-    // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    assert.strictEqual(circle(2).circumference, 12.56)
-    // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    assert.strictEqual(circle(3).area, 28.259999999999998);
-    // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    assert.deepStrictEqual(circle(3), { 'area': 28.259999999999998, 'circumference': 18.84, 'radius': 3 })
+  // ESCREVA SEUS TESTES ABAIXO:
+  // Teste se circle retorna um objeto.
+  // assert.strictEqual(typeof(circle(1)), 'object');
+  it('verifica se a função circle retorna um objeto', () => {
+    expect(typeof circle(1)).toBe('object');
+  });
+
+  // Teste se o objeto retornado tem 3 entradas.
+  // assert.strictEqual(Object.keys(circle(1)).length, 3);
+  it('verifica se objeto retornado tem 3 entradas', () => {
+    expect(Object.keys(circle(1)).length).toBe(3);
+  });
+  // // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
+  // assert.strictEqual(circle(), undefined);
+  it('verifica se a função, quando não recebe nenhum parâmetro, retorna undefined', () => {
+    expect(circle()).toBe(undefined);
+  });
+  // // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
+  // assert.strictEqual(circle(2).circumference, 12.56)
+  it('verifica se a função retorna, dentro de um objeto, a circunferência correta para um cícurlo de raio 2', () => {
+    expect(circle(2).circumference).toBe(12.56);
+  });
+  // // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
+  // assert.strictEqual(circle(3).area, 28.259999999999998);
+  it('verifica se a função retorna, dentro de um objeto, a área correta para um círculod e raio 3', () => {
+    expect(circle(3).area).toBe(28.259999999999998);
+  });
+  // // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
+  // assert.deepStrictEqual(circle(3), { 'area': 28.259999999999998, 'circumference': 18.84, 'radius': 3 })
+  it('verifica se a função retorna, num objeto, os dados corretos de um círculo de raio 3', () => {
+    expect(circle(3)).toEqual({ area: 28.259999999999998, circumference: 18.84, radius: 3 });
   });
 });

@@ -6,7 +6,7 @@
 - A partir de testes já implementados, escrever funções de forma que elas atendam aos testes propostos;
 - Escrever testes e funções utilizando uma abordagem de desenvolvimento orientado a testes.
 
-## modo de usar:
+## Modo de usar:
 
 1. Clone o repositório
   * `git clone git@github.com:Fedolfo/project-js-unit-tests.git`.
